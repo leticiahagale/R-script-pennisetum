@@ -15,7 +15,8 @@ summary(data)
 
 #Inspecao grafica dos dados
 boxplot(multisprout~treatment)
-
+mean=tapply(data$multisprout,data$treatment,mean)
+points(1:5,mean)
 #transformando dados em objetos
 attach(data)
 
